@@ -1,0 +1,199 @@
+/* 🌍 Global Styles */
+body {
+  background-color: #0d0d0d !important;
+  color: white !important;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* 🚀 Hero Section */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* 🌍 3D Globe Background */
+.globe-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: 120vw;
+  height: 120vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+
+/* 👤 About Section */
+.about-section {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 20px;
+  text-align: left;
+  gap: 30px;
+}
+
+/* 🖼️ Profile Image */
+.image-wrapper {
+  z-index: 2;
+
+  img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid white;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  img:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* 📝 Content */
+.content {
+  text-align: left;
+  z-index: 2;
+}
+
+/* 🔗 Social Icons & Resume Button */
+.social_icons {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Space between icons & button */
+  margin-top: 15px;
+}
+
+.social_icons a {
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social_icons a svg {
+  font-size: 2rem;
+}
+
+.social_icons a:hover {
+  transform: scale(1.2);
+  color: #0077b5;
+}
+
+/* 📄 Resume Button - Now beside LinkedIn */
+.resume-button button {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  padding: 8px 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 15px rgba(255, 65, 108, 0.5);
+}
+
+.resume-button button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+}
+
+/* 👑 Title & Description */
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+p {
+  font-size: 1.8rem;
+  color: #dcdcdc;
+  margin-top: 10px;
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 1024px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about-section h1 {
+    font-size: 3rem;
+  }
+
+  .about-section p {
+    font-size: 1.5rem;
+  }
+
+  .image-wrapper img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .content .social_icons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding-top: 50px;
+  }
+
+  .about-section h1 {
+    font-size: 2.8rem !important;
+  }
+
+  .about-section p {
+    text-align: center;
+  }
+
+  .image-wrapper img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .resume-button button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section h1 {
+    font-size: 2.5rem !important;
+  }
+
+  .about-section p {
+    font-size: 1.2rem;
+  }
+
+  .image-wrapper img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .resume-button button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
