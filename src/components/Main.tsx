@@ -38,7 +38,7 @@ const Main = () => {
 
       const camera = globeRef.current.camera();
       if (camera) {
-        camera.position.set(300, 0, 300); // Adjust camera position
+        camera.position.set(250, 0, 250); // Adjust camera position
         camera.lookAt(new THREE.Vector3(0, 0, 0)); // Ensure camera looks at the center
       }
     }
@@ -78,9 +78,9 @@ const Main = () => {
             <a href="https://www.linkedin.com/in/shivaram-emmidi/" target="_blank" rel="noreferrer">
               <LinkedInIcon />
             </a>
-            <button className="resume-button" onClick={() => window.open("/resume.pdf", "_blank")}>
-              Download Resume
-            </button>
+            <a href="/resume.pdf" download="Shivaram_Resume.pdf" className="resume-button">
+              📥 Download Resume
+            </a>
           </div>
         </div>
       </div>
