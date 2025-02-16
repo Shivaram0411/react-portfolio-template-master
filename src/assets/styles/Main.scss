@@ -77,7 +77,7 @@ body {
   z-index: 2;
 }
 
-/* 🔗 Social Icons & Resume Button */
+/* 🔗 Social Icons */
 .social_icons {
   display: flex;
   align-items: center;
@@ -99,111 +99,4 @@ body {
   color: #0077b5;
 }
 
-/* 📄 Resume Button - Clean Design */
-.resume-button {
-  margin-left: 10px;
-
-  button {
-    background: linear-gradient(45deg, #ff416c, #ff4b2b);
-    padding: 10px 20px;
-    color: white;
-    font-weight: bold;
-    font-size: 1rem;
-    border-radius: 25px;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 5px 15px rgba(255, 65, 108, 0.5);
-  }
-
-  button:hover {
-    transform: scale(1.1);
-    background: linear-gradient(45deg, #ff4b2b, #ff416c);
-  }
-}
-
-/* 👑 Title & Description */
-h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-top: 15px;
-  color: #ffffff;
-  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
-}
-
-p {
-  font-size: 1.6rem;
-  color: #dcdcdc;
-  margin-top: 10px;
-}
-
-/* 📱 Responsive Styles */
-@media (max-width: 1024px) {
-  .about-section {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .about-section h1 {
-    font-size: 3.5rem;
-  }
-
-  .about-section p {
-    font-size: 1.4rem;
-  }
-
-  .image-wrapper img {
-    width: 140px;
-    height: 140px;
-  }
-
-  .content .social_icons {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-section {
-    padding-top: 40px;
-  }
-
-  .about-section h1 {
-    font-size: 3rem !important;
-  }
-
-  .about-section p {
-    text-align: center;
-    font-size: 1.3rem;
-  }
-
-  .image-wrapper img {
-    width: 130px;
-    height: 130px;
-  }
-
-  .resume-button button {
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-section h1 {
-    font-size: 2.5rem !important;
-  }
-
-  .about-section p {
-    font-size: 1.1rem;
-  }
-
-  .image-wrapper img {
-    width: 100px;
-    height: 100px;
-  }
-
-  .resume-button button {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
-}
+/* 📄 Resume Bu
