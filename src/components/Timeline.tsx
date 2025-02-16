@@ -2,7 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import { VerticalTimeline, VerticalTimelineElement } from "react-vertical-timeline-component";
-import "react-vertical-timeline-component/style.min.css";
+import "react-vertical-timeline-component/dist/style.min.css";
 import "../assets/styles/Timeline.scss";
 import educationTimeline from "../data/timeline"; // ✅ Fix: Ensure correct import path
 
