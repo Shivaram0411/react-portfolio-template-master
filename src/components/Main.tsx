@@ -2,7 +2,6 @@ import React, { useRef, useEffect, useState } from "react";
 import Globe from "react-globe.gl";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import myImage from "../assets/images/mine.JPG"; // ✅ Import Correctly
 import "../assets/styles/Main.scss";
 
 const Main: React.FC = () => {
@@ -30,7 +29,6 @@ const Main: React.FC = () => {
     if (globeRef.current) {
       globeRef.current.controls().autoRotate = true;
       globeRef.current.controls().autoRotateSpeed = 1.2;
-
       const camera = globeRef.current.camera();
       camera.position.set(300, 0, 300);
       camera.lookAt(0, 0, 0);
@@ -56,7 +54,7 @@ const Main: React.FC = () => {
       {/* 👤 Profile Section */}
       <div className="about-section">
         <div className="image-wrapper">
-          <img src={myImage} alt="Shivaram Emmidi" />
+          <img src="/assets/images/mine.JPG" alt="Shivaram Emmidi" />
         </div>
 
         <div className="content">
