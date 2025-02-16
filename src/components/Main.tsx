@@ -5,19 +5,19 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import * as THREE from "three"; // Ensure WebGL stability
 import "../assets/styles/Main.scss";
 
-function Main() {
+const Main = () => {
   const globeRef = useRef<GlobeMethods | null>(null);
   const [globeSize, setGlobeSize] = useState({
-    width: window.innerWidth * 1.2, // Increased size
-    height: window.innerHeight * 1.2,
+    width: window.innerWidth * 0.8,
+    height: window.innerHeight * 0.8,
   });
 
   // 📌 Adjust Globe Size Responsively
   useEffect(() => {
     const handleResize = () => {
       setGlobeSize({
-        width: window.innerWidth * 1.2, // Increased size
-        height: window.innerHeight * 1.2,
+        width: window.innerWidth * 0.8,
+        height: window.innerHeight * 0.8,
       });
     };
 
@@ -29,41 +29,19 @@ function Main() {
 
   // 🌍 Ensure Continuous Rotation and Proper Camera Setup
   useEffect(() => {
-    const globe = globeRef.current;
-    if (!globe) return;
-
-    // Enable auto-rotate and set camera position
-    const enableAutoRotate = () => {
-      const controls = globe.controls();
+    if (globeRef.current) {
+      const controls = globeRef.current.controls();
       if (controls) {
         controls.autoRotate = true;
-        controls.autoRotateSpeed = 2; // Increased rotation speed
+        controls.autoRotateSpeed = 1.2;
       }
-    };
 
-    // Start auto-rotate
-    enableAutoRotate();
-
-    // Set up a render loop to keep the globe rotating smoothly
-    const animate = () => {
-      requestAnimationFrame(animate);
-      const controls = globe.controls();
-      if (controls) {
-        controls.update(); // Required for auto-rotate to work
+      const camera = globeRef.current.camera();
+      if (camera) {
+        camera.position.set(300, 0, 300); // Adjust camera position
+        camera.lookAt(new THREE.Vector3(0, 0, 0)); // Ensure camera looks at the center
       }
-    };
-
-    animate();
-
-    // Cleanup
-    return () => {
-      if (globe) {
-        const controls = globe.controls();
-        if (controls) {
-          controls.autoRotate = false; // Disable auto-rotate on unmount
-        }
-      }
-    };
+    }
   }, []);
 
   return (
@@ -79,19 +57,6 @@ function Main() {
           atmosphereAltitude={0.3}
           width={globeSize.width}
           height={globeSize.height}
-          onGlobeReady={() => {
-            if (globeRef.current) {
-              const controls = globeRef.current.controls();
-              controls.autoRotate = true;
-              controls.autoRotateSpeed = 2; // Increased rotation speed
-
-              const camera = globeRef.current.camera();
-              if (camera) {
-                camera.position.set(300, 0, 300); // Adjust camera position
-                camera.lookAt(new THREE.Vector3(0, 0, 0)); // Ensure camera looks at the center
-              }
-            }
-          }}
         />
       </div>
 
@@ -102,26 +67,25 @@ function Main() {
         </div>
 
         <div className="content">
-          <div className="social_icons">
+          <h1>Shivaram Emmidi</h1>
+          <p>Computer Science Graduate</p>
+
+          {/* Social Icons & Resume */}
+          <div className="social-resume-container">
             <a href="https://github.com/Shivaram0411" target="_blank" rel="noreferrer">
               <GitHubIcon />
             </a>
             <a href="https://www.linkedin.com/in/shivaram-emmidi/" target="_blank" rel="noreferrer">
               <LinkedInIcon />
             </a>
-          </div>
-
-          <h1>Shivaram Emmidi</h1>
-          <p>Computer Science Graduate</p>
-
-          {/* 📄 Resume Download */}
-          <div className="resume-button">
-            <button onClick={() => window.open("/resume.pdf", "_blank")}>Download Resume</button>
+            <button className="resume-button" onClick={() => window.open("/resume.pdf", "_blank")}>
+              Download Resume
+            </button>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Main;
