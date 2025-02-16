@@ -7,6 +7,10 @@
       ]
     }
   ],
+  "devDependencies": [
+    { "@babel/plugin-proposal-private-property-in-object": "^7.21.0" }
+  ],
+
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
