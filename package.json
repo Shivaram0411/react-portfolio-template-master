@@ -37,7 +37,8 @@
     "@rollup/plugin-terser": "^0.4.0",
     "rimraf": "^4.0.0",
     "@jridgewell/sourcemap-codec": "^1.4.8",
-    "lru-cache": "^7.18.3"
+    "lru-cache": "^7.18.3",
+    "svgo": "^2.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
