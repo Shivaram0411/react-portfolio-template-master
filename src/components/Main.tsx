@@ -60,7 +60,7 @@ const Main: React.FC = () => {
       {/* 👤 Profile Section */}
       <div className="about-section">
         <div className="image-wrapper">
-          <img src="/assets/images/mine.JPG" alt="Shivaram Emmidi" />
+          <img src={require("../assets/images/mine.JPG")} alt="Shivaram Emmidi" />
         </div>
 
         <div className="content">
@@ -69,20 +69,10 @@ const Main: React.FC = () => {
 
           {/* 🔗 Social Icons & Resume */}
           <div className="social-resume-container">
-            <a
-              href="https://github.com/Shivaram0411"
-              target="_blank"
-              rel="noreferrer"
-              className="social-icon"
-            >
+            <a href="https://github.com/Shivaram0411" target="_blank" rel="noreferrer" className="social-icon">
               <GitHubIcon />
             </a>
-            <a
-              href="https://www.linkedin.com/in/shivaram-emmidi/"
-              target="_blank"
-              rel="noreferrer"
-              className="social-icon"
-            >
+            <a href="https://www.linkedin.com/in/shivaram-emmidi/" target="_blank" rel="noreferrer" className="social-icon">
               <LinkedInIcon />
             </a>
             <a href="/resume.pdf" className="resume-button" download>
