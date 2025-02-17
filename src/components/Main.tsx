@@ -60,7 +60,7 @@ const Main: React.FC = () => {
       {/* 👤 Profile Section */}
       <div className="about-section">
         <div className="image-wrapper">
-          <img src={require("../assets/images/mine.JPG")} alt="Shivaram Emmidi" />
+          <img src={require("../assets/images/mine.jpg")} alt="Shivaram Emmidi" />
         </div>
 
         <div className="content">
