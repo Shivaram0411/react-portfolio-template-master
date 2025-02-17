@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: "dist", // ✅ Ensures Vite builds to the correct directory
+    outDir: "dist", // ✅ Ensures Vite builds correctly
     target: "esnext",
   },
   server: {
