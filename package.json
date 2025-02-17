@@ -31,7 +31,8 @@
     "three": "^0.172.0",
     "typescript": "^4.9.5",
     "stream-browserify": "^3.0.0",
-    "vm-browserify": "^1.1.2"
+    "vm-browserify": "^1.1.2",
+    "url": "^0.11.4"  // ✅ Fix for missing 'url/' module
   },
   "scripts": {
     "start": "react-scripts start",
