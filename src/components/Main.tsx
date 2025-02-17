@@ -27,11 +27,17 @@ const Main: React.FC = () => {
   // ✅ Ensure Continuous Rotation & Camera Setup
   useEffect(() => {
     if (globeRef.current) {
-      globeRef.current.controls().autoRotate = true;
-      globeRef.current.controls().autoRotateSpeed = 1.2;
+      const controls = globeRef.current.controls();
+      if (controls) {
+        controls.autoRotate = true;
+        controls.autoRotateSpeed = 1.2;
+      }
+
       const camera = globeRef.current.camera();
-      camera.position.set(300, 0, 300);
-      camera.lookAt(0, 0, 0);
+      if (camera) {
+        camera.position.set(300, 0, 300);
+        camera.lookAt(0, 0, 0);
+      }
     }
   }, []);
 
@@ -63,10 +69,20 @@ const Main: React.FC = () => {
 
           {/* 🔗 Social Icons & Resume */}
           <div className="social-resume-container">
-            <a href="https://github.com/Shivaram0411" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/Shivaram0411"
+              target="_blank"
+              rel="noreferrer"
+              className="social-icon"
+            >
               <GitHubIcon />
             </a>
-            <a href="https://www.linkedin.com/in/shivaram-emmidi/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.linkedin.com/in/shivaram-emmidi/"
+              target="_blank"
+              rel="noreferrer"
+              className="social-icon"
+            >
               <LinkedInIcon />
             </a>
             <a href="/resume.pdf" className="resume-button" download>
