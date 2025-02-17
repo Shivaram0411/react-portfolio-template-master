@@ -11,7 +11,6 @@ const Main: React.FC = () => {
     height: window.innerHeight * 0.8,
   });
 
-  // ✅ Adjust Globe Size Responsively
   useEffect(() => {
     const handleResize = () => {
       setGlobeSize({
@@ -24,20 +23,13 @@ const Main: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // ✅ Ensure Continuous Rotation & Camera Setup
   useEffect(() => {
     if (globeRef.current) {
-      const controls = globeRef.current.controls();
-      if (controls) {
-        controls.autoRotate = true;
-        controls.autoRotateSpeed = 1.2;
-      }
-
+      globeRef.current.controls().autoRotate = true;
+      globeRef.current.controls().autoRotateSpeed = 1.2;
       const camera = globeRef.current.camera();
-      if (camera) {
-        camera.position.set(300, 0, 300);
-        camera.lookAt(0, 0, 0);
-      }
+      camera.position.set(300, 0, 300);
+      camera.lookAt(0, 0, 0);
     }
   }, []);
 
@@ -60,7 +52,7 @@ const Main: React.FC = () => {
       {/* 👤 Profile Section */}
       <div className="about-section">
         <div className="image-wrapper">
-          <img src={require("../assets/images/mine.jpg")} alt="Shivaram Emmidi" />
+          <img src="/assets/images/mine.JPG" alt="Shivaram Emmidi" />
         </div>
 
         <div className="content">
@@ -69,10 +61,20 @@ const Main: React.FC = () => {
 
           {/* 🔗 Social Icons & Resume */}
           <div className="social-resume-container">
-            <a href="https://github.com/Shivaram0411" target="_blank" rel="noreferrer" className="social-icon">
+            <a
+              href="https://github.com/Shivaram0411"
+              target="_blank"
+              rel="noreferrer"
+              className="social-icon"
+            >
               <GitHubIcon />
             </a>
-            <a href="https://www.linkedin.com/in/shivaram-emmidi/" target="_blank" rel="noreferrer" className="social-icon">
+            <a
+              href="https://www.linkedin.com/in/shivaram-emmidi/"
+              target="_blank"
+              rel="noreferrer"
+              className="social-icon"
+            >
               <LinkedInIcon />
             </a>
             <a href="/resume.pdf" className="resume-button" download>
