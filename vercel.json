@@ -1,13 +1,9 @@
 {
-  "headers": [
-    {
-      "source": "/manifest.json",
-      "headers": [
-        { "key": "Content-Type", "value": "application/json" }
-      ]
-    }
+  "version": 2,
+  "builds": [
+    { "src": "package.json", "use": "@vercel/static-build" }
   ],
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
