@@ -8,7 +8,7 @@ module.exports = function override(config) {
     assert: require.resolve("assert"),
     vm: require.resolve("vm-browserify"),
     url: require.resolve("url"),
-    os: require.resolve("os-browserify/browser") // ✅ Fix for missing 'os-browserify'
+    os: require.resolve("os-browserify/browser"),
   };
 
   config.plugins.push(
