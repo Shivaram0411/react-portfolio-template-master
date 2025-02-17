@@ -63,20 +63,10 @@ const Main: React.FC = () => {
 
           {/* 🔗 Social Icons & Resume */}
           <div className="social-resume-container">
-            <a
-              href="https://github.com/Shivaram0411"
-              target="_blank"
-              rel="noreferrer"
-              className="social-icon"
-            >
+            <a href="https://github.com/Shivaram0411" target="_blank" rel="noreferrer">
               <GitHubIcon />
             </a>
-            <a
-              href="https://www.linkedin.com/in/shivaram-emmidi/"
-              target="_blank"
-              rel="noreferrer"
-              className="social-icon"
-            >
+            <a href="https://www.linkedin.com/in/shivaram-emmidi/" target="_blank" rel="noreferrer">
               <LinkedInIcon />
             </a>
             <a href="/resume.pdf" className="resume-button" download>
