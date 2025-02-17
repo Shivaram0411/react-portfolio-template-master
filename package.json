@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "homepage": ".",
-  "type": "module", // Add this for ES modules support
+  "type": "module", 
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.11.4",
