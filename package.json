@@ -33,7 +33,7 @@
     "stream-browserify": "^3.0.0",
     "vm-browserify": "^1.1.2",
     "url": "^0.11.4",
-    "os-browserify": "^0.3.0"  // ✅ Fix for missing 'os-browserify'
+    "os-browserify": "^0.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
