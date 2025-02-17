@@ -11,6 +11,7 @@ const Main: React.FC = () => {
     height: window.innerHeight * 0.8,
   });
 
+  // ✅ Adjust Globe Size Responsively
   useEffect(() => {
     const handleResize = () => {
       setGlobeSize({
@@ -23,6 +24,7 @@ const Main: React.FC = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // ✅ Ensure Continuous Rotation & Camera Setup
   useEffect(() => {
     if (globeRef.current) {
       globeRef.current.controls().autoRotate = true;
