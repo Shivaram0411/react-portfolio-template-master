@@ -8,7 +8,7 @@ const Main: React.FC = () => {
   const globeRef = useRef<any>(null);
   const [globeSize, setGlobeSize] = useState({
     width: window.innerWidth * 0.8,
-    height: window.innerHeight * 0.8,
+    height: window.innerHeight * 0.8
   });
 
   // ✅ Adjust Globe Size Responsively
@@ -16,7 +16,7 @@ const Main: React.FC = () => {
     const handleResize = () => {
       setGlobeSize({
         width: window.innerWidth * 0.8,
-        height: window.innerHeight * 0.8,
+        height: window.innerHeight * 0.8
       });
     };
 
