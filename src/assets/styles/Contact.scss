@@ -1,0 +1,119 @@
+/* 🌍 Full Page Contact Section */
+#contact {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+}
+
+/* 🎨 Contact Form Container */
+.contact-container {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 50px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 600px; /* 🚀 Increased Form Width */
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* 📝 Input Fields - Clean, Spacious, & Smooth */
+.input-field {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 12px;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 25px; /* 🛠 Added More Space */
+}
+
+/* ✅ Focus Effect */
+.input-field:focus {
+  outline: none;
+  border-color: #ff416c;
+  box-shadow: 0px 6px 14px rgba(255, 65, 108, 0.5);
+}
+
+/* 📤 Send Button - Centered & Modern */
+.send-button {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  padding: 14px;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 5px 20px rgba(255, 65, 108, 0.6);
+  width: 100%;
+  margin-top: 20px;
+}
+
+.send-button:hover {
+  transform: scale(1.07);
+  background: linear-gradient(45deg, #ff4b2b, #ff416c);
+  box-shadow: 0px 8px 25px rgba(255, 65, 108, 0.8);
+}
+
+/* ✅ Status Message */
+.status-message {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffd700;
+}
+
+/* 🌀 Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    width: 90%;
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  .input-field {
+    font-size: 1rem;
+    padding: 14px;
+    margin-bottom: 20px;
+  }
+
+  .send-button {
+    font-size: 1.2rem;
+    padding: 12px;
+  }
+}
